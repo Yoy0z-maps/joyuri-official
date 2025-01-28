@@ -13,7 +13,7 @@ export default function AlbumDetail({ album }: { album: Album }) {
   };
 
   return (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[770px] h-[440px] rounded-2xl backdrop-blur-md bg-white/30 p-[30px] flex flex-col gap-y-3">
+    <div className="absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[770px] h-[440px] rounded-2xl backdrop-blur-md bg-white/40 p-[30px] flex flex-col gap-y-3">
       <div className="flex justify-center items-end relative">
         <div className="mr-auto gap-x-[20px] flex absolute top-0 left-0">
           <Link

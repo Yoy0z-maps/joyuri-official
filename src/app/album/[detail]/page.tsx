@@ -1,6 +1,12 @@
+"use client";
+import MusicSheetBg from "@/components/album/detail/MusicSheetBg";
 import NightViewBg from "@/components/album/detail/NightViewBg";
+import TaxiBg from "@/components/album/detail/TaxiBg";
+import { usePathname } from "next/navigation";
 
 export default function AlbumDetailPage() {
+  const pathname = usePathname();
+
   const albumData = {
     1: {
       title: "GLASSY",
@@ -67,11 +73,31 @@ export default function AlbumDetailPage() {
       rcLink: "https://youtu.be/KAMYFeidL-I?si=mq9JWLxbuNn4dkFE",
     },
   };
-  const album = albumData[2];
+  const album = albumData[pathname.split("/")[2]];
 
-  return (
-    <div className="w-full h-[calc(100vh-180px)] bg-white relative">
-      <NightViewBg album={album} />
-    </div>
-  );
+  if (pathname === "/album/1")
+    return (
+      <>
+        <NightViewBg album={album} />
+      </>
+    );
+
+  if (pathname === "/album/2")
+    return (
+      <>
+        <MusicSheetBg album={album} />
+      </>
+    );
+  if (pathname === "/album/3")
+    return (
+      <>
+        <MusicSheetBg album={album} />
+      </>
+    );
+  if (pathname === "/album/4")
+    return (
+      <>
+        <TaxiBg album={album} />
+      </>
+    );
 }

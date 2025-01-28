@@ -25,12 +25,24 @@ export default {
         "window-red": "#FE5F57",
         "window-yellow": "#FEBB2E",
         "window-green": "#27CA42",
+        "nightview-top": "#111425",
+        "nightview-bottom": "#3751e0",
       },
       borderColor: {
         "album-red": "#EB2D41",
         "album-yellow": "#EFB904",
         "album-green": "#2BAB5E",
         "album-purple": "#B2B1D9",
+      },
+      keyframes: {
+        animate: {
+          "0%": { opacity: "0", transform: "translateY(0)" },
+          "10%, 90%": { opacity: "1" },
+          "100%": { opacity: "0", transform: "translateY(-100%)" },
+        },
+      },
+      animation: {
+        animate: "animate 1s linear infinite",
       },
     },
   },

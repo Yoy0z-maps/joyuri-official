@@ -1,8 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import HeaderNavigation from "./HeaderNavigation";
 import HeaderLink from "./HeaderLink";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+  const albumDetailRegex = /^\/album\/\d+$/;
+
+  if (pathname === "/test" || albumDetailRegex.test(pathname)) {
+    return null;
+  }
+
   return (
     <div className="w-screen h-[180px] px-14 bg-white flex items-center justify-between relative">
       <HeaderNavigation />
