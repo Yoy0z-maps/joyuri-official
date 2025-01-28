@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 
 export default function AlbumDetailPage() {
   const pathname = usePathname();
-  const albumId = parseInt(pathname.split("/")[2], 10);
-  console.log(typeof albumId);
+  const albumId = parseInt(pathname.split("/")[2], 10) - 1;
+
   const albumData = [
     {
       title: "GLASSY",
