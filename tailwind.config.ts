@@ -22,6 +22,9 @@ export default {
         "album-yellow": "#EFB904",
         "album-green": "#2BAB5E",
         "album-purple": "#B2B1D9",
+        "window-red": "#FE5F57",
+        "window-yellow": "#FEBB2E",
+        "window-green": "#27CA42",
       },
       borderColor: {
         "album-red": "#EB2D41",
