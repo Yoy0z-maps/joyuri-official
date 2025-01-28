@@ -41,7 +41,8 @@ export default function ContentsSlider() {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
-
+    autoplay: true,
+    autoplaySpeed: 3000,
     centerPadding: "20px",
   };
 
@@ -54,38 +55,40 @@ export default function ContentsSlider() {
     slickRef.current?.slickNext();
   };
   return (
-    <div className="w-full h-full flex items-center justify-centerpt-24 mx-20">
+    <div className="w-full h-full flex items-center justify-center pt-24 mx-20">
       <MdNavigateBefore
         className="absolute top-1/2 left-10 transform -translate-y-1/2 cursor-pointer text-primary transition-all duration-300"
         size={60}
         onClick={handlePrev}
       />
 
-      <Slider
-        {...settings}
-        className="w-full h-full overflow-hidden"
-        ref={slickRef}
-      >
-        {contents.map((content, index) => (
-          <div key={index} className="gap-3 w-max-[540px] mr-[20px]">
-            <Image
-              src={content.src}
-              alt={content.title}
-              width={540}
-              height={302}
-            />
-            <h3 className="text-black font-pretendard font-bold text-2xl mt-4">
-              {content.title}
-            </h3>
-            <p className="text-deep-gray font-pretendard font-regular text-lg mt-2">
-              {content.detail1}
-            </p>
-            <p className="text-deep-gray font-pretendard font-regular text-lg">
-              {content.detail2}
-            </p>
-          </div>
-        ))}
-      </Slider>
+      <div className="w-[1100px] overflow-hidden h-full">
+        <Slider
+          {...settings}
+          className="w-full h-full overflow-hidden"
+          ref={slickRef}
+        >
+          {contents.map((content, index) => (
+            <div key={index} className="gap-3 w-max-[540px] px-[10px]">
+              <Image
+                src={content.src}
+                alt={content.title}
+                width={540}
+                height={302}
+              />
+              <h3 className="text-black font-pretendard font-bold text-2xl mt-4">
+                {content.title}
+              </h3>
+              <p className="text-deep-gray font-pretendard font-regular text-lg mt-2">
+                {content.detail1}
+              </p>
+              <p className="text-deep-gray font-pretendard font-regular text-lg">
+                {content.detail2}
+              </p>
+            </div>
+          ))}
+        </Slider>
+      </div>
       <MdNavigateNext
         className="absolute top-1/2 right-10 transform -translate-y-1/2 cursor-pointer text-primary transition-all duration-300"
         size={60}
