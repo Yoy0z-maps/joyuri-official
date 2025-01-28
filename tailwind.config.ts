@@ -23,6 +23,12 @@ export default {
         "album-green": "#2BAB5E",
         "album-purple": "#B2B1D9",
       },
+      borderColor: {
+        "album-red": "#EB2D41",
+        "album-yellow": "#EFB904",
+        "album-green": "#2BAB5E",
+        "album-purple": "#B2B1D9",
+      },
     },
   },
   plugins: [],
