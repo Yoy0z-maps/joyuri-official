@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .bg-stripe {
+    background-size: 50px;
+    background-image: linear-gradient(
+      90deg,
+      #fff,
+      #fff 50%,
+      transparent 50%,
+      transparent 100%
+    );
+  }
+  .bg-light_beam_before {
+    background-image: linear-gradient(90deg, #fff6, transparent);
+  }
+  .transform-light_beam {
+    transform-origin: left;
+    transform: perspective(500px) rotateY(-50deg);
+  }
+}
+
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
@@ -35,5 +55,32 @@ body {
   100% {
     opacity: 0;
     transform: translateY(-100px);
+  }
+}
+
+@keyframes animate_road {
+  0% {
+    background-position: 50px 0;
+  }
+  100% {
+    background-position: 0px 0;
+  }
+}
+
+@keyframes animate_taxi {
+  0% {
+    transform: translateX(20px) translateY(20px);
+  }
+  25% {
+    transform: translateX(-50px) translateY(0px);
+  }
+  50% {
+    transform: translateX(20px) translateY(-20px);
+  }
+  75% {
+    transform: translateX(50px) translateY(0px);
+  }
+  100% {
+    transform: translateX(20px) translateY(20px);
   }
 }
