@@ -49,20 +49,29 @@ export default function AlbumDetail({ album }: { album: Album }) {
           <p className="text-[20px] font-semibold font-pretendard text-black">
             {album.title}
           </p>
-          <p className="text-[18px] font-regular font-pretendard text-deep-gray line-clamp-4">
+
+          <p className="text-[18px] font-regular font-pretendard text-black line-clamp-4 mt-1">
             {album.description}
           </p>
-          <div className="w-full h-[1px] bg-light-gray"></div>
-          <p>수록곡</p>
-          {album.list.map((item) => (
-            <div className="flex gap-x-[10px]" key={item.id}>
-              <p>{item.title}</p>
+          <div className="w-full h-[1px] bg-white my-3"></div>
+          {album.list.map((item, index) => (
+            <div
+              className="flex gap-x-[15px] items-center justify-start"
+              key={item.id}
+            >
+              <p className="mb-1 font-pretendard font-regular text-black text-[18px]">
+                {`${index + 1}. ${item.title}`}
+              </p>
               {item.attribute === "" ? (
                 <></>
               ) : item.attribute === "TITLE" ? (
-                <p>{item.attribute}</p>
+                <p className="text-white text-[10px] mb-1 px-1 rounded-sm bg-window-red">
+                  {item.attribute}
+                </p>
               ) : (
-                <p>{item.attribute}</p>
+                <p className="text-white text-[10px] mb-1 px-1 rounded-sm bg-window-red">
+                  {item.attribute}
+                </p>
               )}
             </div>
           ))}
