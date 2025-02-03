@@ -6,7 +6,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function AlbumDetail({ album }: { album: Album }) {
-  // 소형 플레이어로 전환 w-[400px] h-[680px] transition-all duration-300 src, title, description만 보이기
   const [isSimplify, setIsSimplify] = useState(false);
   const simplifyAlbumInfo = () => {
     setIsSimplify(!isSimplify);
