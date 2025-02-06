@@ -32,13 +32,12 @@ export default function MusicSheetBg({ album }: { album: Album }) {
         );
       }
     };
-    const animate = (t: number) => {
+    const animate = () => {
       if (canvas && ctx) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        let dots;
         musicSheet.current.forEach((line) => {
-          dots = line.draw(ctx);
+          line.draw(ctx);
         });
 
         requestAnimationFrame(animate);

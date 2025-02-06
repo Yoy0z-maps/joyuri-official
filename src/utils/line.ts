@@ -45,7 +45,6 @@ export class Line {
     let cur = this.points[0]; // 현재 포인트
     let prev = cur; // 이전 포인트
 
-    let dots = [];
     cur.x += this.speed;
 
     // 포인트가 화면 밖으로 나가면 새로운 포인트를 추가 및 제거
@@ -61,9 +60,6 @@ export class Line {
     // 경로의 시작점
     ctx.moveTo(cur.x, cur.y);
 
-    let prevCx = cur.x;
-    let prevCy = cur.y;
-
     // 포인트 간의 곡선 그리기
     for (let i = 1; i < this.points.length; i++) {
       cur = this.points[i];
@@ -72,26 +68,13 @@ export class Line {
       const cy = (prev.y + cur.y) / 2;
       ctx.quadraticCurveTo(prev.x, prev.y, cx, cy); // 부드러운 곡선 그리는 메서드
 
-      dots.push({
-        x1: prevCx,
-        y1: prevCy,
-        x2: prev.x,
-        y2: prev.y,
-        x3: cx,
-        y3: cy,
-      });
-
       prev = cur;
-      prevCx = cx;
-      prevCy = cy;
     }
 
     ctx.lineTo(prev.x, prev.y);
     ctx.lineTo(this.stageWidth, this.stageHeight);
     ctx.lineTo(this.points[0].x, this.stageHeight);
     ctx.stroke(); // 경로를 따라 선 그리기
-
-    return dots;
   }
 
   // 선의 높낮이 랜덤하게 설정
