@@ -22,9 +22,10 @@ export default function ContentsSlider() {
     },
     {
       src: "/assets/images/content/content3.png",
-      title: "Glassy 1기 활동 종료",
-      detail1: "Glassy 2기 모집 예정",
-      detail2: "Glassy 2기 모집에 대한 자세한 글은 팬카페에서 확인해주세요.",
+      title: "Glassy 2기 모집 시작",
+      detail1: "2025년 2월 3일 PM08:00 Glassy 2기 열차 출발합니다~",
+      detail2:
+        "모집 방법과 정보 그리고 Glassy 2기에게 주어지는 각종 혜택은 카페에서 확인하세요",
     },
     {
       src: "/assets/images/content/content4.png",

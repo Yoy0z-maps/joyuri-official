@@ -33,6 +33,7 @@ export default {
         taxi_yellow: "#fdd206",
         taxi_white: "#ebebeb",
         taxi_black: "#475b66",
+        "music-sheet": "#D6D0C2",
       },
       borderColor: {
         "album-red": "#EB2D41",
