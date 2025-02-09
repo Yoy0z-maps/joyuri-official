@@ -9,12 +9,6 @@ import Slider from "react-slick";
 export default function ContentsSlider() {
   const contents = [
     {
-      src: "/assets/images/content/content1.png",
-      title: "웹드라마 미미쿠스",
-      detail1: "웹드라마 미미쿠스에 조유리 강림",
-      detail2: "진짜가 되기 위한 치열한 생존기를 그린 하이틴 드라마",
-    },
-    {
       src: "/assets/images/content/content2.png",
       title: "넷플릭스 오징어게임2",
       detail1: "오징어 게임에 출현한 조유리",
@@ -28,10 +22,23 @@ export default function ContentsSlider() {
         "모집 방법과 정보 그리고 Glassy 2기에게 주어지는 각종 혜택은 카페에서 확인하세요",
     },
     {
+      src: "/assets/images/content/content5.png",
+      title: "오늘의 쪼율 TMI",
+      detail1: "매일 매일 쪼율의 TMI가 궁금하지 않아?",
+      detail2:
+        "bubble과 chat plut에서 JOYURI를 구독하고 쪼율의 TMI를 확인해보세요",
+    },
+    {
       src: "/assets/images/content/content4.png",
       title: "the GAME must go on",
       detail1: "지금부터 본격적인 놀이의 시간",
       detail2: "더블유 W Vol.2 H형 잡지에서 조유리를 만나보세요.",
+    },
+    {
+      src: "/assets/images/content/content1.png",
+      title: "웹드라마 미미쿠스",
+      detail1: "웹드라마 미미쿠스에 조유리 강림",
+      detail2: "진짜가 되기 위한 치열한 생존기를 그린 하이틴 드라마",
     },
   ];
 
